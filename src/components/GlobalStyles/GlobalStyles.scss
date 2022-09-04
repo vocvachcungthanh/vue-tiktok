@@ -1,0 +1,17 @@
+@import "normalize.css";
+@import "./fonts";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+}
