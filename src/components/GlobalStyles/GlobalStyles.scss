@@ -15,4 +15,26 @@ body {
   font-size: 1.4rem;
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
+  color: var(--text-color);
+}
+
+a,
+button,
+[tabIndex] {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+a[href] {
+  color: var(--text-color);
+}
+
+input {
+  border: none;
+  outline: none;
+  background-color: transparent;
 }

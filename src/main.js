@@ -1,14 +1,14 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
 
 import App from "./App.vue";
 import { publicRoutes } from "./routes";
 
-/* import font awesome icon component */
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-
-/* add font awesome icon component */
-Vue.component("font-awesome-icon", FontAwesomeIcon);
+library.add(fas);
+Vue.component("FontAwesomeIcon", FontAwesomeIcon);
 
 Vue.use(VueRouter);
 Vue.config.productionTip = false;

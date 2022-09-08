@@ -1,8 +1,6 @@
 <template>
   <header class="wrapper">
     <div class="inner">
-      <font-awesome-icon :icon="{ faUserSecret }" />
-
       <div class="logo">
         <img :src="iconLogo" alt="Tiktok" />
       </div>
@@ -11,24 +9,29 @@
           type="text"
           placeholder="Search accounts and videos"
           spellcheck="false"
+          class="search__input"
         />
-        <button class="clear">
-          <!-- Clear -->
+        <button class="search__clear">
+          <FontAwesomeIcon :icon="['fas', 'fa-circle-xmark']" />
         </button>
 
-        <!-- Loading -->
+        <button class="search__loading">
+          <FontAwesomeIcon :icon="['fas', 'fa-spinner']" />
+        </button>
 
-        <button class="search-btn">
-          <!-- Search -->
+        <button class="search__btn">
+          <IconSearch className="search__btn--img" />
         </button>
       </div>
+      <div class="actions"></div>
     </div>
   </header>
 </template>
 
 <script>
 import images from "@/assets/images";
-import { faUserSecret } from "@fortawesome/free-solid-svg-icons";
+
+import { IconSearch } from "@/components/Icons";
 
 export default {
   name: "header-default",
@@ -36,8 +39,11 @@ export default {
   data() {
     return {
       iconLogo: images.logo,
-      faUserSecret,
     };
+  },
+
+  components: {
+    IconSearch,
   },
 };
 </script>
